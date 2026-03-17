@@ -18,6 +18,98 @@ Products API adalah RESTful API sederhana yang digunakan untuk melakukan manajem
 
 ---
 
+### Contoh CRUD 🔧
+
+#### Create (POST /products)
+
+```bash
+curl -X POST http://127.0.0.1:5000/products \
+-H "Content-Type: application/json" \
+-d '{"name": "Laptop", "price": 1000}'
+```
+
+#### Read All (GET /products)
+
+```bash
+curl http://127.0.0.1:5000/products
+```
+
+#### Read by ID (GET /products/{id})
+
+```bash
+curl http://127.0.0.1:5000/products/1
+```
+
+#### Update (PUT /products/{id})
+
+```bash
+curl -X PUT http://127.0.0.1:5000/products/1 \
+-H "Content-Type: application/json" \
+-d '{"name": "Laptop Gaming", "price": 1500}'
+```
+
+#### Delete (DELETE /products/{id})
+
+```bash
+curl -X DELETE http://127.0.0.1:5000/products/1
+```
+
+---
+
+### Mapping CRUD → Endpoint 📊
+
+| Operasi    | Method | Endpoint       |
+| ---------- | ------ | -------------- |
+| Create     | POST   | /products      |
+| Read All   | GET    | /products      |
+| Read by ID | GET    | /products/{id} |
+| Update     | PUT    | /products/{id} |
+| Delete     | DELETE | /products/{id} |
+
+---
+
+### Flow Request → Response 🔄
+
+1. Client mengirim HTTP request (GET/POST/PUT/DELETE)
+2. Request diterima oleh endpoint `/products`
+3. Server memproses data (create/read/update/delete)
+4. Server mengembalikan response JSON
+5. Client menerima hasil (success/error)
+
+Contoh alur:
+
+```
+Client → Request → API → Process → JSON Response → Client
+```
+
+---
+
+### Format Response
+
+#### Success Response ✅
+
+```json
+{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "name": "Laptop",
+    "price": 1000
+  }
+}
+```
+
+#### Error Response ❌
+
+```json
+{
+  "status": "error",
+  "message": "Product not found"
+}
+```
+
+---
+
 ### Format Response
 
 #### Success Response

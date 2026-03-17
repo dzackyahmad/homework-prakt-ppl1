@@ -1,6 +1,6 @@
 # Products API
 
-![CI Status](https://github.com/dzackyahmad/homework-prakt-ppl1/actions/workflows/ci.yml/badge.svg?branch=develop)
+![CI Status](https://github.com/dzackyahmad/homework-prakt-ppl1/actions/workflows/main.yml/badge.svg?branch=develop)
 
 ## 1. Deskripsi Project
 

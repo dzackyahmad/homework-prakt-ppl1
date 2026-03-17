@@ -1,5 +1,7 @@
 # Products API
 
+![CI Status](https://github.com/dzackyahmad/homework-prakt-ppl1/actions/workflows/ci.yml/badge.svg)
+
 ## 1. Deskripsi Project
 
 Products API adalah RESTful API sederhana yang digunakan untuk melakukan manajemen data produk. API ini menyediakan operasi CRUD (Create, Read, Update, Delete) dan mengembalikan response dalam format JSON standar.
